@@ -8,30 +8,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
   </head>
   <body class="px-4 is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
-    <span class="icon-text has-text-primary">
+    <span class="my-4 icon-text has-text-primary has-text-weight-bold is-size-5">
       <span class="icon">
         <i class="fas fa-glasses"></i>
       </span>
-      <span>Diopter Calculator</span>
+      <span> Diopter Calculator</span>
     </span>
     
      <label for="y">Enter Perceived Diopter (+/- sign sensitive):</label>
-     <input class="mb-4 input is-primary" type="number" id="y">
+     <input class="mb-4 input is-primary" type="number" id="y" required>
      
      <label for="x">Enter Vertex Distance (mm):</label>
-     <input class="mb-4 input is-primary" type="number" id="x">
+     <input class="mb-4 input is-primary" type="number" id="x" required>
      
      <input class="mb-4 button is-primary" type="submit" onclick="calc()">
      
-     <span>You Require <b>0</b> powered Glasses.</span>
+     <span>You Require <b class="is-size-4">0</b> powered Glasses.</span>
      
-     <a class="has-text-danger" href="https://wiki.endmyopia.org/wiki/Vertex_distance">Learn More, here.</a>
-     <a href="https://github.com/n-ce/diopter-calculator">
-       <span class="icon has-text-primary">
+     <a class="my-4 has-text-danger" href="https://wiki.endmyopia.org/wiki/Vertex_distance">Learn More, here.</a>
+     <a class="tag is-flex  is-justify-content-center is-size-6"href="https://github.com/n-ce/diopter-calculator">
+       <span class="icon">
          <i class="fab fa-github"></i>
-      </span>
+      </span>&nbsp;&nbsp;v1.0.8.21
     </a>
-    <span class="tag is-info ">v1.0.0821</span>
+    
     <script>
       function calc()
       {
