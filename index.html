@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Diopter Calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  </head>
+  <body class="px-4 is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
+    <span class="icon-text has-text-primary">
+      <span class="icon">
+        <i class="fas fa-glasses"></i>
+      </span>
+      <span>Diopter Calculator</span>
+    </span>
+    
+     <label for="y">Enter Perceived Diopter (+/- sign sensitive):</label>
+     <input class="mb-4 input is-primary" type="number" id="y">
+     
+     <label for="x">Enter Vertex Distance (mm):</label>
+     <input class="mb-4 input is-primary" type="number" id="x">
+     
+     <input class="mb-4 button is-primary" type="submit" onclick="calc()">
+     
+     <span>You Require <b>0</b> powered Glasses.</span>
+     
+     <a class="has-text-danger" href="https://wiki.endmyopia.org/wiki/Vertex_distance">Learn More, here.</a>
+     <a href="https://github.com/n-ce/diopter-calculator">
+       <span class="icon has-text-primary">
+         <i class="fab fa-github"></i>
+      </span>
+    </a>
+    <span class="tag is-info ">v1.0.0821</span>
+    <script>
+      function calc()
+      {
+        var y = document.getElementById('y').value;
+        var x = document.getElementById('x').value;
+        document.querySelector('b').innerHTML=(y/(1+(y*(x/1000)))).toFixed(2);
+      }
+    </script>
+  </body>
+</html>
