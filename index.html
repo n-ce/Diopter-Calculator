@@ -16,12 +16,10 @@
     </span>
     
      <label for="y">Enter Perceived Diopter (+/- sign sensitive):</label>
-     <input class="mb-4 input is-primary" type="number" id="y" required>
+     <input class="mb-4 input is-primary has-text-centered" type="number" id="y" required>
      
      <label for="x">Enter Vertex Distance (mm):</label>
-     <input class="mb-4 input is-primary" type="number" id="x" required>
-     
-     <input class="mb-4 button is-primary" type="submit" onclick="calc()">
+     <input class="mb-4 input is-primary has-text-centered" type="number" id="x" required>
      
      <span>You Require <b class="is-size-4">0</b> powered Glasses.</span>
      
@@ -29,11 +27,11 @@
      <a class="tag is-flex  is-justify-content-center is-size-6"href="https://github.com/n-ce/diopter-calculator">
        <span class="icon">
          <i class="fab fa-github"></i>
-      </span>&nbsp;&nbsp;v1.0.8.21
+      </span>&nbsp;&nbsp;v1.4.821
     </a>
     
     <script>
-      function calc()
+      document.body.oninput = function()
       {
         var y = document.getElementById('y').value;
         var x = document.getElementById('x').value;
