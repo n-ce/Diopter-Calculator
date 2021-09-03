@@ -14,21 +14,23 @@
       </span>
       <span> Diopter Calculator</span>
     </span>
-    
+    <form oninput="a.value= (parseInt/(1+(parseInt(y.value)*(parseInt(x.value)/1000)))).toFixed(2)" class="has-text-centered "  >
      <label for="y">Enter Perceived Diopter (+/- sign sensitive):</label>
-     <input class="mb-4 input is-primary has-text-centered" type="number" id="y" required>
+     <input class="mb-4 input is-primary" type="number" id="y" required>
      
      <label for="x">Enter Vertex Distance (mm):</label>
-     <input class="mb-4 input is-primary has-text-centered" type="number" id="x" required>
+     <input class="mb-4 input is-primary" type="number" id="x" required>
      
-     <span>You Require <b class="is-size-4">0</b> powered Glasses.</span>
-     
+     <span>You Require <output name="a" for="x y"                       class="is-size-4">0</output> powered Glasses.</span>
+      
+     </form>
+
      <a class="my-4 has-text-danger" href="https://wiki.endmyopia.org/wiki/Vertex_distance">Learn More, here.</a>
      <a class="tag is-flex  is-justify-content-center is-size-6"href="https://github.com/n-ce/diopter-calculator">
        <span class="icon">
          <i class="fab fa-github"></i>
       </span>&nbsp;&nbsp;v1.4.821
     </a>
-    <script src="script.js"></script>
+
   </body>
 </html>
